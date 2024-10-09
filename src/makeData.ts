@@ -21,13 +21,8 @@ const newPerson = (): Person => {
     firstName: faker.person.firstName(),
     lastName: faker.person.lastName(),
     token_amount:
-      parseInt(faker.string.numeric({ length: { min: 0, max: 4 } })) *
+      parseInt(faker.string.numeric({ length: { min: 1, max: 4 } })) *
       (faker.number.binary() === "1" ? 1 : -1),
-    // token_amount: faker.number.float({
-    //   min: -10000,
-    //   max: 10000,
-    //   fractionDigits: 3,
-    // }),
     created_datetime: dayjs(faker.date.past().getTime()).toISOString(),
   };
 };

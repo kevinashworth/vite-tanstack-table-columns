@@ -50,10 +50,22 @@ const baseTableCssNoHover = css({
 });
 
 const baseTableCss = css(baseTableCssNoHover, {
+  thead: {
+    th: {
+      ":nth-of-type(1), :nth-of-type(2), :nth-of-type(3)": {
+        borderRight: "1px solid " + spectrum.gray[200],
+      },
+    },
+  },
   tbody: {
     tr: {
       "&:hover": {
         backgroundColor: spectrum.vibrant + "20",
+      },
+    },
+    td: {
+      ":nth-of-type(2), :nth-of-type(3), :nth-of-type(4)": {
+        borderRight: "1px solid " + spectrum.gray[200],
       },
     },
   },
