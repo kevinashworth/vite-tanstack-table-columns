@@ -1,6 +1,6 @@
 import { isNaN, isNil } from "lodash-es";
 
-const integerFormatter = (num: number): string => {
+const integerFormatter = (num?: number | null): string => {
   if (!num || isNaN(num) || isNil(num)) {
     return "0";
   }
